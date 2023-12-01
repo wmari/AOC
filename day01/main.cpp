@@ -2,50 +2,6 @@
 #include <string>
 #include <fstream>
 
-int get_num(int i)
-{
-	switch (i)
-	{
-		case 0:
-			return (1);
-		case 1:
-			return (2);
-		case 2:
-			return (3);
-		case 3:
-			return (4);
-		case 4:
-			return (5);
-		case 5:
-			return (6);
-		case 6:
-			return (7);
-		case 7:
-			return (8);
-		case 8:
-			return (9);
-		case 9:
-			return (1);
-		case 10:
-			return (2);
-		case 11:
-			return (3);
-		case 12:
-			return (4);
-		case 13:
-			return (5);
-		case 14:
-			return (6);
-		case 15:
-			return (7);
-		case 16:
-			return (8);
-		case 17:
-			return (9);
-	}
-	return (0);
-}
-
 int getFirstd(std::string line)
 {
 	std::string tab[18] = {"one", "two", "three", "four", "five", "six", "seven", "eight", "nine", "1", "2", "3", "4", "5", "6", "7", "8", "9"};
@@ -68,7 +24,7 @@ int getFirstd(std::string line)
 		}
 	}
 	if (lowest != -1)
-		return (get_num(lowest));
+		return ((lowest % 9) + 1);
 	return (0);
 }
 
@@ -94,7 +50,7 @@ int getLastd(std::string line)
 		}
 	}
 	if (lowest != -1)
-		return (get_num(lowest));
+		return ((lowest % 9) + 1);
 	return (0);
 }
 
